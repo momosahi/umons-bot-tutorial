@@ -7,7 +7,9 @@ app = Flask(__name__)
 app_id = "174830"
 
 # Read the bot certificate
-with open(os.path.normpath(os.path.expanduser("bot-key.pem")), "r") as cert_file:
+with open(
+    os.path.normpath(os.path.expanduser("bot-private-key.pem")), "r"
+) as cert_file:
     app_key = cert_file.read()
 
 # Create an GitHub integration instance
